@@ -21,6 +21,16 @@
       </v-list>
     </v-navigation-drawer>
 
+    <v-navigation-drawer
+      v-model="rightDrawer"
+      width="450"
+      absolute
+      temporary
+      right
+    >
+      <CartItems />
+    </v-navigation-drawer>
+
     <v-app-bar app color="indigo" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>Application</v-toolbar-title>
@@ -41,7 +51,7 @@
       </v-row>
     </v-container>
 
-    <CartButton />
+    <CartButton @toogleCartDetails="toogleCartDetails" />
     <v-footer color="indigo" app>
       <span class="white--text">&copy; 2019</span>
     </v-footer>
@@ -54,10 +64,17 @@ export default {
     source: String
   },
   components: {
-    CartButton: () => import("../components/CartButton")
+    CartButton: () => import("../components/CartButton"),
+    CartItems: () => import("../components/CartItems")
   },
   data: () => ({
-    drawer: null
-  })
+    drawer: null,
+    rightDrawer: false
+  }),
+  methods: {
+    toogleCartDetails() {
+      this.rightDrawer = !this.rightDrawer;
+    }
+  }
 };
 </script>
