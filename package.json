@@ -16,7 +16,7 @@
     "apexcharts": "^3.16.1",
     "date-fns": "^2.8.1",
     "file-saver": "^2.0.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.25.3",
     "qs": "^6.9.1",
     "roboto-fontface": "*",
