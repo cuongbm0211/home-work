@@ -18,7 +18,7 @@
     "file-saver": "^2.0.2",
     "lodash": "^4.17.15",
     "moment": "^2.25.3",
-    "qs": "^6.9.1",
+    "qs": "^6.9.7",
     "roboto-fontface": "*",
     "vue": "^2.6.10",
     "vue-apexcharts": "^1.5.2",
